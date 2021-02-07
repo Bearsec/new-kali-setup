@@ -1,1 +1,22 @@
-echo "BearSec Kali setup"; apt-get update; apt-get -y install tmux git kali-root-login; cd /tmp; git clone https://github.com/Bearsec/tmux.conf; cp /tmp/tmux.conf/.tmux.conf /root/; rm -rf /tmp/tmux.conf; git clone https://github.com/Bearsec/zsh-parrot-theme.git; chmod +x /tmp/zsh-parrot-theme/install.zsh; /tmp/zsh-parrot-theme/install.zsh; rm -rf /tmp/zsh-parrot-theme; echo "set vb" >> ~/.vimrc; echo "xset b off" >> ~/.xession; xset b off; echo "set bell-style none" >> /etc/inputrc; echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf; touch ~/.hushlogin; sudo passwd;
+echo "BearSec Kali setup";
+apt-get update;
+apt-get -y install tmux git kali-root-login;
+cd /tmp;
+git clone https://github.com/Bearsec/tmux.conf;
+cp /tmp/tmux.conf/.tmux.conf /root/;
+rm -rf /tmp/tmux.conf;
+git clone https://github.com/Bearsec/new-kali-setup
+cd /tmp/new-kali-setup
+cp ./mount-shared-folders /usr/local/sbin/mount-shared-folders;
+chmod +x /usr/local/sbin/mount-shared-folders;
+cp ./restart-vm-tools /usr/local/sbin/restart-vm-tools;
+chmod +x /usr/local/sbin/restart-vm-tools;
+cd ..;
+rm -rf /tmp/new-kali-setup;
+echo "set vb" >> ~/.vimrc;
+echo "xset b off" >> ~/.xession;
+xset b off;
+echo "set bell-style none" >> /etc/inputrc;
+echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf;
+touch ~/.hushlogin;
+sudo passwd;
