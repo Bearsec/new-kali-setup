@@ -1,4 +1,5 @@
 #!/bin/bash
+#/usr/local/sbin/mount-shared-folders
 #echo "[i] Updating argos pannel"
 #mv /root/.config/argos/tun0_status.0r.3s.sh /root/.config/argos/tun0_status.1r.3s.sh
 #mv /root/.config/argos/tun0_status.1r.3s.sh /root/.config/argos/tun0_status.0r.3s.sh
