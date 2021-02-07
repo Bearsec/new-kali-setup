@@ -1,0 +1,22 @@
+#!/bin/bash
+#echo "[i] Updating argos pannel"
+#mv /root/.config/argos/tun0_status.0r.3s.sh /root/.config/argos/tun0_status.1r.3s.sh
+#mv /root/.config/argos/tun0_status.1r.3s.sh /root/.config/argos/tun0_status.0r.3s.sh
+echo "[i] Removing old folders and files"
+vmware-hgfsclient | while read folder; do
+ rm -rf "/root/${folder}"
+ rm -rf "/root/Desktop/${folder}"
+ rm -rf "/root/htb.sh"
+ rm -rf "/${folder}"
+  echo "[i] Mounting ${folder}   (/mnt/hgfs/${folder})"
+  mkdir -p "/mnt/hgfs/${folder}"
+  umount -f "/mnt/hgfs/${folder}" 2>/dev/null
+  vmhgfs-fuse -o allow_other -o auto_unmount ".host:/${folder}" "/mnt/hgfs/${folder}"
+  echo "[i] Creating symlinks"
+  ln -s "/mnt/hgfs/${folder}" "/root/${folder}"
+  ln -s "/mnt/hgfs/${folder}" "/root/Desktop/${folder}"
+  ln -s "/mnt/hgfs/${folder}/htb/info/htb.sh" "/root/htb.sh"
+  ln -s "/mnt/hgfs/${folder}/" "/${folder}"
+done
+echo [+] Done!
+sleep 2s
