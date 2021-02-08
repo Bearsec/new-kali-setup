@@ -22,8 +22,12 @@ chmod +x /usr/local/sbin/restart-vm-tools;
 cp ./green.jpg /root/Documents/green.jpg;
 cp ./vpn-ip-mon /usr/local/sbin/vpn-ip-mon;
 chmod +x /usr/local/sbin/vpn-ip-mon;
+cp /tmp/new-kali-setup/xfce-backup.tar /root/xfce-backup.tar;
+
 cd ..;
 rm -rf /tmp/new-kali-setup;
+cd /root/;
+tar xf /root/xfce-backup.tar;
 ln -s /usr/local/sbin/mount-shared-folders /root/Desktop/mount-shared-folders;
 ln -s /usr/local/sbin/restart-vm-tools /root/Desktop/restart-vm-tools;
 echo "set vb" >> ~/.vimrc;
@@ -32,6 +36,8 @@ xset b off;
 echo "set bell-style none" >> /etc/inputrc;
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf;
 touch ~/.hushlogin;
+
+#REBOOT
 
 # Create VPN ip monitor, separator and move it before clock
 # Create xfce gen-mon | Lable disable | Time 1 sec | Font: Monospace Bold 11 |
@@ -52,16 +58,13 @@ sh -c "/usr/local/sbin/vpn-ip-mon" 2>/dev/null
 
 # Import pannel settings
 You can hand jam it into a tar archive and it's "saved."
-
 Code: Select all
-
 tar cf xfce4panel.tar .config/xfce4/panel
-
 or save the whole desktop setup:
 
 Code: Select all
 
-tar cf xfce4.tar .config/xfce4
+tar cf xfce4.tar .config
 
 To restore in some other home directory:
 
