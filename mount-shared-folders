@@ -7,7 +7,7 @@ echo "[i] Removing old folders and files"
 vmware-hgfsclient | while read folder; do
  rm -rf "/root/${folder}"
  rm -rf "/root/Desktop/${folder}"
- rm -rf "/root/htb.sh"
+ rm -rf "/user/local/sbin/htb-vpn"
  rm -rf "/${folder}"
   echo "[i] Mounting ${folder}   (/mnt/hgfs/${folder})"
   mkdir -p "/mnt/hgfs/${folder}"
@@ -16,7 +16,7 @@ vmware-hgfsclient | while read folder; do
   echo "[i] Creating symlinks"
   ln -s "/mnt/hgfs/${folder}" "/root/${folder}"
   ln -s "/mnt/hgfs/${folder}" "/root/Desktop/${folder}"
-  ln -s "/mnt/hgfs/${folder}/htb/info/htb.sh" "/root/htb.sh"
+  ln -s "/mnt/hgfs/${folder}/htb/info/htb.sh" "/user/local/sbin/htb-vpn"
   ln -s "/mnt/hgfs/${folder}/" "/${folder}"
 done
 echo [+] Done!
