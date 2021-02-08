@@ -48,3 +48,23 @@ sh -c "/usr/local/sbin/vpn-ip-mon" 2>/dev/null
 # disable lookscreen and sleep
 
 # Change wallpaper from /root/Documents/
+
+
+# Import pannel settings
+You can hand jam it into a tar archive and it's "saved."
+
+Code: Select all
+
+tar cf xfce4panel.tar .config/xfce4/panel
+
+or save the whole desktop setup:
+
+Code: Select all
+
+tar cf xfce4.tar .config/xfce4
+
+To restore in some other home directory:
+
+Code: Select all
+
+tar xf xfce4panel.tar
