@@ -24,7 +24,7 @@ cp /tmp/new-kali-setup/xfce-backup.tar /root/xfce-backup.tar;
 cd ..;
 rm -rf /tmp/new-kali-setup;
 cd /root/;
-tar xf /root/xfce-backup.tar;
+tar xf xfce-backup.tar;
 ln -s /usr/local/sbin/mount-shared-folders /root/Desktop/mount-shared-folders;
 ln -s /usr/local/sbin/restart-vm-tools /root/Desktop/restart-vm-tools;
 echo "set vb" >> ~/.vimrc;
