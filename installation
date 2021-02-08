@@ -1,3 +1,5 @@
+# Add shared folder to VM!
+
 # Create password for root
 sudo passwd;
 # Change user to root
@@ -41,5 +43,8 @@ sh -c "/usr/local/sbin/vpn-ip-mon" 2>/dev/null
 
 # Setting up file manager side panel
 ...
+
+# Setting up power supply
+# disable lookscreen and sleep
 
 # Change wallpaper from /root/Documents/
