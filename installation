@@ -42,6 +42,7 @@ reboot;
 cd /root/;
 tar xf xfce-backup.tar;
 rm -rf xfce-backup.tar;
+/root/Desktop/mount-shared-folders;
 echo;
 echo "###############################";
 echo "Settings imported! Reboot after 5 sec...";
