@@ -2,13 +2,10 @@
 
 # Create password for root
 sudo passwd;
-# Change user to root
-su;
-# Under root made update and install
-apt-get update;
-apt-get -y install tmux git kali-root-login;
 
 # Reboot and login as root
+apt-get update;
+apt-get -y install tmux git kali-root-login;
 cd /tmp;
 git clone https://github.com/Bearsec/tmux.conf;
 cp /tmp/tmux.conf/.tmux.conf /root/;
