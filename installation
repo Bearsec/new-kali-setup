@@ -49,12 +49,3 @@ echo "Settings imported! Reboot after 5 sec...";
 echo "###############################";
 sleep 5;
 reboot;
-
-
-# Setting up file manager side panel
-...
-
-# Setting up power supply
-# disable lookscreen and sleep
-
-# Change wallpaper from /root/Documents/
