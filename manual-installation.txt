@@ -6,7 +6,8 @@ sudo passwd;
 # Reboot and login as root
 # Before executing next command add "Panel 2"!
 apt-get update;
-apt-get -y install tmux git kali-root-login;
+apt-get -y install tmux git;
+#apt-get -y install kali-root-login;
 cd /tmp;
 git clone https://github.com/Bearsec/tmux.conf;
 cp /tmp/tmux.conf/.tmux.conf /root/;
