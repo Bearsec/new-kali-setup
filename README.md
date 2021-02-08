@@ -27,3 +27,9 @@ xset b off;
 echo "set bell-style none" >> /etc/inputrc;
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf;
 touch ~/.hushlogin;
+# Create VPN ip monitor
+echo "#!/bin/bash" >> /usr/local/sbin/vpn-ip-mon
+echo "if ifconfig tun0 | grep -q 'inet'; then echo `/sbin/ip -o -4 addr list tun0 | awk '{print $4}' | cut -d/ -f1`; else echo 'NO VPN'; fi" >> /usr/local/sbin/vpn-ip-mon
+chmod +x /usr/local/sbin/vpn-ip-mon
+# Create xfce gen-mon 
+sh -c "/usr/local/sbin/vpn-ip-mon" 2>/dev/null
