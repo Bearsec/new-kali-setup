@@ -17,6 +17,7 @@ cp ./mount-shared-folders /usr/local/sbin/mount-shared-folders;
 chmod +x /usr/local/sbin/mount-shared-folders;
 cp ./restart-vm-tools /usr/local/sbin/restart-vm-tools;
 chmod +x /usr/local/sbin/restart-vm-tools;
+cp ./green.jpg /root/Documents/green.jpg
 cd ..;
 rm -rf /tmp/new-kali-setup;
 ln -s /usr/local/sbin/mount-shared-folders /root/Desktop/mount-shared-folders;
@@ -28,7 +29,7 @@ echo "set bell-style none" >> /etc/inputrc;
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf;
 touch ~/.hushlogin;
 
-# Create VPN ip monitor
+# Create VPN ip monitor, separator and move it before clock
 echo "#\!/bin/bash" > /usr/local/sbin/vpn-ip-mon;
 echo "if ifconfig tun0 | grep -q 'inet'; then echo `/sbin/ip -o -4 addr list tun0 | awk '{print $4}' | cut -d/ -f1`; else echo 'NO VPN'; fi" >> /usr/local/sbin/vpn-ip-mon;
 chmod +x /usr/local/sbin/vpn-ip-mon;
@@ -39,3 +40,4 @@ sh -c "/usr/local/sbin/vpn-ip-mon" 2>/dev/null
 # Add workspace change hotkey
 # Menu > Settings > Window Manager > keyboard
 # "Previous workspace" > supper + Page Up | "Next workspace" > supper + Page Down
+
