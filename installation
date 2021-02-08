@@ -33,9 +33,9 @@ xset b off;
 echo "set bell-style none" >> /etc/inputrc;
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf;
 touch ~/.hushlogin;
-echo "All done! Reboot after 5 sec..."
-sleep 5
-reboot
+echo "All done! Reboot after 5 sec...";
+sleep 5;
+reboot;
 #REBOOT
 
 
