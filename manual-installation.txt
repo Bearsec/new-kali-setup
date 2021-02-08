@@ -53,3 +53,12 @@ echo "Settings imported! Reboot after 5 sec...";
 echo "###############################";
 sleep 5;
 reboot;
+
+
+# Update all
+apt-get update
+apt-get -y dist-upgrade
+apt-get autoremove --purge
+
+# Clean disks
+vmware-toolbox-cmd disk shrink /
