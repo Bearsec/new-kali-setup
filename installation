@@ -41,3 +41,5 @@ sh -c "/usr/local/sbin/vpn-ip-mon" 2>/dev/null
 
 # Setting up file manager side panel
 ...
+
+# Change wallpaper from /root/Documents/
