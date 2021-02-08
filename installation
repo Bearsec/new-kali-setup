@@ -35,3 +35,7 @@ chmod +x /usr/local/sbin/vpn-ip-mon;
 
 # Create xfce gen-mon | Lable disable | Time 1 sec | Font: Monospace Bold 11 |
 sh -c "/usr/local/sbin/vpn-ip-mon" 2>/dev/null
+
+# Add workspace change hotkey
+# Menu > Settings > Window Manager > keyboard
+# "Previous workspace" > supper + Page Up | "Next workspace" > supper + Page Down
