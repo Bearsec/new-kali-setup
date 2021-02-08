@@ -43,7 +43,7 @@ reboot;
 #AFTER REBOOT
 cd /root/;
 tar xf xfce-backup.tar;
-rm -rf xfce-backup.tar;
+#rm -rf xfce-backup.tar;
 /root/Desktop/mount-shared-folders;
 echo;
 echo "###############################";
