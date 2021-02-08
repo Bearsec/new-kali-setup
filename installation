@@ -4,6 +4,7 @@
 sudo passwd;
 
 # Reboot and login as root
+# Before executing next command add "Panel 2"!
 apt-get update;
 apt-get -y install tmux git kali-root-login;
 cd /tmp;
@@ -20,7 +21,6 @@ cp ./green.jpg /root/Documents/green.jpg;
 cp ./vpn-ip-mon /usr/local/sbin/vpn-ip-mon;
 chmod +x /usr/local/sbin/vpn-ip-mon;
 cp /tmp/new-kali-setup/xfce-backup.tar /root/xfce-backup.tar;
-
 cd ..;
 rm -rf /tmp/new-kali-setup;
 cd /root/;
