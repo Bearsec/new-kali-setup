@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "if ifconfig tun0 | grep -q 'inet'; then echo `/sbin/ip -o -4 addr list tun0 | awk '{print $4}' | cut -d/ -f1`; else echo 'NO VPN'; fi" >> /usr/local/sbin/vpn-ip-mon;
