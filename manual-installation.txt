@@ -54,6 +54,11 @@ echo "###############################";
 sleep 5;
 reboot;
 
+# "pimpmykali" - Fixes for new imported Kali Linux virtual machines
+git clone https://github.com/Dewalt-arch/pimpmykali;
+cd pimpmykali;
+sudo ./pimpmykali.sh;
+# For a new kali vm, run menu option N
 
 # Update all
 apt-get update;
