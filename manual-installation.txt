@@ -67,3 +67,7 @@ apt-get autoremove --purge;
 
 # Clean disks
 vmware-toolbox-cmd disk shrink /
+
+# 02.02.21 - rev 1.1.8 - Turn off / Silence PCSPKR beep
+echo -e "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+echo -e "\n  $greenplus Terminal Beep Silenced! /etc/modprobe.d/nobeep.conf \n"
